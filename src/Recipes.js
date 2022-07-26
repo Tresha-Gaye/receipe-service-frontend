@@ -17,7 +17,7 @@ function Recipes() {
     }, []);
 
     function fetchFromAPI() {
-        fetch("http://localhost:8080/recipes")
+        fetch("https://recipe-heroku-tgu.herokuapp.com/recipes")
             .then(response => response.json())
             .then(result => { console.log(JSON.stringify(result)); setRecipes(result); })
             .catch(console.log);
